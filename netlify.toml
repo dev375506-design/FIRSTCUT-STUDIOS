@@ -1,5 +1,4 @@
 [build]
-  base = "."
   command = "npm run build"
   publish = "dist"
 
@@ -9,16 +8,11 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  included_files = ["server/**"]
 
 [[redirects]]
-  from = "/api/health"
-  to = "/.netlify/functions/inquiries/health"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/inquiries"
-  to = "/.netlify/functions/inquiries"
+  from = "/api/*"
+  to = "/.netlify/functions/inquiries/:splat"
   status = 200
   force = true
 

@@ -4,14 +4,13 @@ type Go=(p?:string,f?:boolean)=>void
 const icons:Record<string,ReactNode>={scissors:<Scissors/>,wand:<Wand2/>,clipboard:<ClipboardList/>,camera:<Camera/>,megaphone:<Megaphone/>}
 export const Head=({e,t,c}:{e:string;t:string;c?:string})=>(<div className="rv mb-12 max-w-2xl"><p className="eyebrow mb-3">{e}</p><h2 className="text-4xl md:text-5xl text-ivory">{t}</h2>{c&&<p className="mt-4 text-ivory/65">{c}</p>}</div>)
 export const Sec=({id,children,alt}:{id:string;children:ReactNode;alt?:boolean})=>(<section id={id} className={`py-24 ${alt?'bg-char/50':''}`}><div className="max-w-7xl mx-auto px-5">{children}</div></section>)
-export function Hero({go}:{go:Go}){return(<section id="home" className="grain relative min-h-screen flex items-center overflow-hidden bg-cover bg-center" style={{backgroundImage:'linear-gradient(90deg,rgba(8,8,9,.94) 0%,rgba(8,8,9,.78) 45%,rgba(8,8,9,.2) 100%),linear-gradient(0deg,#0a0a0b 0%,transparent 28%),url(https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=2400&q=85)'}}>
- <div aria-hidden className="absolute inset-x-0 top-0 h-10 bg-black"/><div aria-hidden className="absolute inset-x-0 bottom-0 h-10 bg-black"/>
- <div className="relative max-w-7xl mx-auto px-5 pt-32 pb-24"><div className="rv in"><Logo s={52}/></div>
+export function Hero({go}:{go:Go}){return(<section id="home" className="grain relative h-dvh min-h-[600px] flex items-center overflow-hidden bg-cover bg-center" style={{backgroundImage:'linear-gradient(90deg,rgba(8,8,9,.94) 0%,rgba(8,8,9,.78) 45%,rgba(8,8,9,.2) 100%),linear-gradient(0deg,#0a0a0b 0%,transparent 28%),linear-gradient(180deg,#0a0a0b 0%,transparent 12%),url(https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=2400&q=85)'}}>
+ <div className="relative max-w-7xl mx-auto px-5 pt-28 pb-20 w-full"><div className="rv in"><Logo s={52}/></div>
  <h1 className="mt-10 text-5xl sm:text-7xl lg:text-8xl leading-[.95] max-w-4xl text-ivory">We Turn Vision Into <span className="text-gold font-serif italic normal-case">Visual Stories.</span></h1>
  <p className="mt-7 max-w-xl text-lg text-ivory/70">From scroll-stopping reels to cinematic brand films, we bring ideas to life through thoughtful production and powerful editing.</p>
  <div className="mt-9 flex flex-wrap gap-4"><button className="btn btn-gold" onClick={()=>go()}>Start a Project</button><a href="#work" className="btn btn-ghost">Explore Our Work</a></div>
  <p className="mt-14 text-xs tracking-[.25em] text-ivory/50">PRE-PRODUCTION · CINEMATOGRAPHY · VIDEO EDITING · POST-PRODUCTION</p></div>
- <a href="#services" aria-label="Scroll down" className="cue absolute bottom-14 left-1/2 -translate-x-1/2 text-gold"><ChevronDown/></a></section>)}
+ <a href="#services" aria-label="Scroll down" className="cue absolute bottom-10 left-1/2 -translate-x-1/2 text-gold"><ChevronDown/></a></section>)}
 export function Offer({go}:{go:Go}){if(!offer.enabled)return null
  return(<section className="py-20"><div className="rv max-w-5xl mx-auto px-5"><div className="card p-8 md:p-12 border-gold/40 text-center" style={{background:'linear-gradient(135deg,#151517,#1c1710)'}}>
  <p className="eyebrow mb-3">Launch Offer</p><h2 className="text-4xl md:text-6xl text-ivory">{offer.title}</h2><p className="mt-5 max-w-2xl mx-auto text-ivory/70">{offer.text}</p>

@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config({ path: process.env.DOTENV_CONFIG_PATH || 'server/.env' });
+import 'dotenv/config';
 import { randomUUID } from 'node:crypto';
 import { extname } from 'node:path';
 import express, { type ErrorRequestHandler } from 'express';
