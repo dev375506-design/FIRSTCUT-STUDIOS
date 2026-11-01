@@ -15,7 +15,11 @@
   },
   "dependencies": {
     "@netlify/functions": "^6.0.3",
+<<<<<<< HEAD
     "dotenv": "^16.4.7",
+=======
+    "dotenv": "^18.0.8",
+>>>>>>> 3a7273b0f0430aee2d25be727614a6387d3e8836
     "express": "^5.3.0",
     "express-rate-limit": "^8.7.1",
     "helmet": "^8.3.0",
